@@ -1,19 +1,23 @@
 # Gnome-breeze
 
-A GTK Theme Built to Match KDE's Breeze. GTK2 theme made by [scionicspectre](https://github.com/scionicspectre/BreezyGTK)
+Build a GTK theme that matches your custom KDE breeze colors.
+
+This is a fork of https://github.com/KDE/breeze-gtk
 
 # Requirements
 
-- GTK+ 3.16
-- Pixmap/Pixbuf theme engine for GTK 2
+- Ruby-Sass
+- Python with the ``pycairo`` package installed
 
-# Install instructions
-If your distribution doesn't provide a package, you can install the theme system-wide by copying it to the appropriate directory, usually "/usr/share/themes".
+# How to build
+
+Add your KDE color schemes to the folder ``color-schemes`` and build the theme
+
 ```
-find Breeze* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}" \;
+./build_theme ThetaDev
+./build_theme ThetaDevDark
 ```
 
-To install only for the current user, copy the files to "~/.themes".
+The built themes are located in the ``build`` folder.
 
-To set the theme in Plasma 5, install kde-gtk-config and use System Settings > Application Style > GNOME Application Style.
-Also make sure to disable "apply colors to non-Qt applications" in System Settings > Colors > Options.
+Copy them to ``~/.themes`` or ``/usr/share/themes`` for system-wide installation. Then you can choose the theme via System settings > Application style > Configure GNOME/GTK Application style.
