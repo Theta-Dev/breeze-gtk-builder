@@ -14,8 +14,8 @@ This is a fork of https://github.com/KDE/breeze-gtk
 Add your KDE color schemes to the folder ``color-schemes`` and build the theme
 
 ```
-./build_theme ThetaDev
-./build_theme ThetaDevDark
+./build_theme -c ThetaDev
+./build_theme -c ThetaDevDark
 ```
 
 The built themes are located in the ``build`` folder.
